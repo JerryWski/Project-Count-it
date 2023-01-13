@@ -10,59 +10,64 @@
       name="description"
       content="how to calculate the values from a deposit vs the value from an investment fundr"
     />
-    
+
     <link rel="stylesheet" href="styles.css" />
     <link rel="shortcut icon" href="#" />
     <!--to po to aby nie było błędu w konsoli-->
   </head>
 
   <body>
-   <div class="container">
+    <div class="container">
+      <div class="header-container">
+        <h1>Diffrence in profit received</h1>
+        <h2>Bank Deposit vs Investment Fund</h2>
+      </div>
 
-    <div class="header-container">
-      <h1>Diffrence in profit received</h1>
-      <h2>Bank Deposit vs Investment Fund</h2>
-    </div>
+      <div class="data-cointainer">
+        <div class="inputs-wrapper">
+          <div class="count-wrapper">
+            <label for="amount">Enter amount:</label>
+            <input type="number" id="amount" value="10000" /> PLN
+          </div>
+          <div class="count-wrapper">
+            <label for="rate">Rate*:</label>
+            <input type="number" id="rate" value="1" max="100" /> %
+          </div>
+          <div class="count-wrapper">
+            <label for="month">Duration:</label>
+            <input type="number" id="month" value="" max="12" /> month/s
+          </div>
+        </div>
+      </div>
 
-    <div class="data-cointainer">
-      <div class="inputs-wrapper">
-        <div class="count-wrapper">
-          <label for="amount">Enter amount:</label>
-          <input type="number" id="amount" value="10000"> PLN
+      <div class="amount-wrapper">
+        <div class="deposit-amount">
+          <div class="button-wrapper">
+            <button class="calcuate-btn">Calculate for deposit</button>
+          </div>
+          <div class="result">
+            <p>Interest: <span class="total-interest"></span> PLN</p>
+            <p>Total amount: <span class="total-amount"></span> PLN</p>
+          </div>
         </div>
-        <div class="count-wrapper">
-          <label for="rate">Rate*:</label>
-          <input type="number" id="rate" value="1" max="100"> %
-        </div>
-        <div class="count-wrapper">
-          <label for="month">Duration:</label>
-          <input type="number" id="month" value="" max="12"> month/s
+        <div class="investment-amount">
+          <div class="button-wrapper">
+            <button class="calcuate-btn">Calculate for investment fund</button>
+          </div>
+          <div class="result">
+            <p>Interest: <span class="total-interest"></span> PLN</p>
+            <p>Total amount: <span class="total-amount"></span> PLN</p>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="amount-wrapper">
-      <div class="deposit-amount">
-        <div class="button-wrapper">
-          <button>Calculate for deposit</button>
-        </div>
-        <div class="result">Total amount: <span class="total-amount"></span></div>
-      </div>
-      <div class="investment-amount">
-        <div class="button-wrapper">
-          <button>Calculate for investment fund</button>
-        </div>
-        <div class="result">Total amount: <span class="total-amount"></span></div>
-      </div>
-    </div>
+    <footer>
+      <p class="footer-info">
+        * The interest rate on the deposit is calculated on an annual basis
+      </p>
+    </footer>
 
-   </div>
-
-   <footer>
-    <p class="footer-info">* The interest rate on the deposit is calculated on an annual basis </p>
-   </footer>
-
-    
     <script src="main.js"></script>
   </body>
 </html>
