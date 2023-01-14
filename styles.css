@@ -1,0 +1,35 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+    background-color: #162345;
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+    border: 2px solid white;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid white;
+    justify-content: center;
+    font-size: .7rem;
+}
+.header-container h2 {
+    text-align: center;
+}
