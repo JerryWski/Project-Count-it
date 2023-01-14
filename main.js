@@ -20,9 +20,10 @@ const calculateDepo = () => {
   let month = monthInput.value;
 
   if(month >= 1 && month <= 12) {
-    interest = (principal * rate) * (month / 12);
+    interest = (principal * rate * 0.81) * (month / 12);
     interestAmountDepo.textContent = interest.toFixed(2);
-    totalAmountDepo.textContent = principal + interest.toFixed(2);
+    console.log(interestAmountDepo);
+    totalAmountDepo.textContent = parseFloat(principal) + parseFloat(interest.toFixed(2));
     clearError();
   } else {
     errorText.textContent = " Please enter a numbers from 1 to 12";
