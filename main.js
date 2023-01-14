@@ -25,7 +25,7 @@ const calculateDepo = () => {
     totalAmountDepo.textContent = principal + interest.toFixed(2);
     clearError();
   } else {
-    errorText.textContent = " Please enter a range of 1 to 12 months";
+    errorText.textContent = " Please enter a numbers from 1 to 12";
     
     }
 }
