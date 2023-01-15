@@ -1,6 +1,7 @@
 html {
   font-size: 100%;
   box-sizing: border-box;
+  font-family: 'Inconsolata', monospace;
 }
 *,
 *::after,
@@ -19,13 +20,14 @@ body {
     background-color: #0e1e43;
     text-align: center;
     border-radius: 7px;
-    max-width: 800px;
+    max-width: 600px;
     min-width: 320px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     padding: 16px;
+    font-weight: 300;
 }
 
 .header-container {
@@ -33,5 +35,33 @@ body {
     border-radius: 7px;
     padding: 12px;
     background-color: #1e2b4e;
+}
+
+.inputs-wrapper {
+  height: 100%;
+  margin-top: 10px;
+  background-color: #1e2b4e;
+  border-radius: 7px;
+  padding: 22px;
+}
+
+.count-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: .8rem;
+  width: 100%;
+}
+
+.count-wrapper input {
+  padding: 10px;
+  margin: 10px;
+  width: fit-content;
+  background: none;
+  /* border: none; */
+  color: #fff;
+  text-align: center;
+  outline: none;
 }
 
