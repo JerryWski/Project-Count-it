@@ -10,12 +10,11 @@ html {
 }
 
 body {
-    background-color: rgb(35, 69, 143);
+    background-color: rgb(207, 165, 73);
     color: #fff;
 }
 
 .container {
-    flex-direction: column;
     margin: auto;
     background-color: #0e1e43;
     text-align: center;
@@ -51,6 +50,7 @@ body {
   justify-content: center;
   align-items: center;
   font-size: .8rem;
+  font-weight: 400;
   width: 100%;
 }
 
@@ -59,9 +59,26 @@ body {
   margin: 10px;
   width: fit-content;
   background: none;
-  /* border: none; */
+  border: none;
+  border-bottom: 1px solid rgb(17, 201, 207);
   color: #fff;
   text-align: center;
   outline: none;
+}
+
+.count-wrapper input:focus {
+  border: 1px solid rgb(117, 115, 115);
+}
+/* .count-wrapper input:hover {
+  border: 2px solid rgb(185, 179, 179);
+} */
+
+.count-wrapper input::-webkit-outer-spin-button,
+.count-wrapper input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.count-wrapper input[type=number] {
+  -moz-appearance: textfield;
 }
 
