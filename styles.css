@@ -51,27 +51,25 @@ body {
   align-items: center;
   font-size: .8rem;
   font-weight: 400;
-  width: 100%;
+  margin-top: 20px;
 }
 
 .count-wrapper input {
-  padding: 10px;
+  padding: 6px;
   margin: 10px;
   width: fit-content;
   background: none;
-  border: none;
-  border-bottom: 1px solid rgb(17, 201, 207);
+  border: transparent;
+  border-bottom: 1px solid rgb(218, 234, 235);
   color: #fff;
   text-align: center;
   outline: none;
 }
 
 .count-wrapper input:focus {
-  border: 1px solid rgb(117, 115, 115);
+  border: 1px solid rgb(255, 255, 255);
 }
-/* .count-wrapper input:hover {
-  border: 2px solid rgb(185, 179, 179);
-} */
+
 
 .count-wrapper input::-webkit-outer-spin-button,
 .count-wrapper input::-webkit-inner-spin-button {
@@ -82,3 +80,10 @@ body {
   -moz-appearance: textfield;
 }
 
+.error-text {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: rgb(238, 40, 40);
+  font-size: 0.8rem;
+}
