@@ -22,17 +22,30 @@
   <body>
     <div class="container">
       <div class="header-container">
-        <h1>
-          Calculate the difference between a bank deposit and an investment fund
-        </h1>
+        <h1>Let's Count It!</h1>
       </div>
 
-        <div class="inputs-wrapper">
-          <div class="count-wrapper">
+      <div class="inputs-wrapper">
+        <!-- <div class="count-wrapper">
             <label for="amount">Starting Amount</label>
-            <input type="number" id="amount" value="" placeholder="PLN" />
-          </div>
-          <div class="count-wrapper">
+            <input class="field-input" type="number" id="amount" value="" placeholder="PLN" />
+          </div> -->
+        <div class="count-wrapper">
+          <input required="required" type="number" id="amount" value="" />
+          <span>Starting amount</span>
+          <i></i>
+        </div>
+        <div class="count-wrapper">
+          <input required="required" type="number" id="rate" value="" />
+          <span>Annual rate</span>
+          <i></i>
+        </div>
+        <div class="count-wrapper">
+          <input required="required" type="number" id="month" max-value="12" />
+          <span>Duration</span>
+          <i></i>
+        </div>
+        <!-- <div class="count-wrapper">
             <label for="rate">Annual Interest Rate (%)</label>
             <input type="number" id="rate" value="" max="100" />
           </div>
@@ -45,9 +58,9 @@
               max="12"
               placeholder="month/s"
             />
-          </div>
-          <span class="error-text"></span>
-        </div>
+          </div> -->
+        <span class="error-text"></span>
+      </div>
 
       <div class="amount-wrapper">
         <div class="deposit-amount">
@@ -82,9 +95,6 @@
         * Income resulting from interest includes capital gains tax - 19%
       </p>
     </div>
-
-    
-    
 
     <script src="main.js"></script>
   </body>

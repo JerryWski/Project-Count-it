@@ -1,5 +1,6 @@
 //qs for data inputs
 const amountInput = document.querySelector("#amount");
+
 const rateInput = document.querySelector("#rate");
 const monthInput = document.querySelector("#month");
 //buttons for counting deposit and investment
@@ -36,7 +37,7 @@ const calcuateInvest = () => {
   let principal = amountInput.value;
   let rate = rateInput.value / 100;
   let month = monthInput.value;
-  
+
   if (month >= 1 && month <= 12) {
     interestTwo = principal * rate * 0.81;
     interestAmountInvest.textContent = interestTwo.toFixed(2);
@@ -54,3 +55,4 @@ const clearError = () => {
 
 btnDeposit.addEventListener("click", calculateDepo);
 btnInvestment.addEventListener("click", calcuateInvest);
+
