@@ -11,8 +11,12 @@ const interestAmountDepo = document.querySelector(".total-interest-depo");
 const totalAmountDepo = document.querySelector(".total-amount-depo");
 const interestAmountInvest = document.querySelector(".total-interest-invest");
 const totalAmountInvest = document.querySelector(".total-amount-invest");
-//error text
+//texts
 const errorText = document.querySelector(".error-text");
+const amountTextDepo = document.querySelectorAll('.amount-text-depo');
+const amountTextInvest = document.querySelectorAll('.amount-text-invest');
+
+console.log(amountTextDepo);
 
 let interest;
 let interestTwo;
@@ -24,6 +28,9 @@ const calculateDepo = () => {
 
   if (month >= 1 && month <= 12) {
     interest = principal * rate * 0.81 * (month / 12);
+    amountTextDepo.forEach(text => {
+      text.classList.add('active')
+    });
     interestAmountDepo.textContent = interest.toFixed(2);
     totalAmountDepo.textContent =
       parseFloat(principal) + parseFloat(interest.toFixed(2));
@@ -40,6 +47,9 @@ const calcuateInvest = () => {
 
   if (month >= 1 && month <= 12) {
     interestTwo = principal * rate * 0.81;
+    amountTextInvest.forEach(text => {
+      text.classList.add('active')
+    });
     interestAmountInvest.textContent = interestTwo.toFixed(2);
     totalAmountInvest.textContent =
       parseFloat(principal) + parseFloat(interestTwo.toFixed(2));
