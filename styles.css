@@ -28,13 +28,15 @@ body {
   min-width: 320px;
   padding: 16px;
   font-weight: 300;
+  
 }
 
 .header-container {
-  font-size: 0.8rem;
+  font-size: 1rem;
   border-radius: 7px;
   padding: 12px;
-  background-color: #181b22;
+  color: #45f3ff;
+  
 }
 
 .inputs-wrapper {
@@ -58,7 +60,7 @@ body {
   display: block;
   margin-top: 10px;
   margin-bottom: 20px;
-  color: rgb(238, 40, 40);
+  color: #853957;
   font-size: 0.8rem;
 }
 
@@ -137,4 +139,16 @@ body {
 .count-wrapper input:valid ~i,
 .count-wrapper input:focus ~i {
   height: 44px;
+}
+
+#buttons {
+  padding: 15px 40px;
+  background: none;
+  /* border: none; */
+  color: white;
+  border-radius: 4px;
+}
+
+.amount-text {
+  font-size: 1.1rem;
 }
