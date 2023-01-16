@@ -21,6 +21,14 @@ console.log(amountTextDepo);
 let interest;
 let interestTwo;
 
+const checkInputValues = () => {
+  if (amountInput.value <= 0 || rateInput.value <= 0) {
+    errorText.textContent = "Please enter a number greater than 0";
+    return false;
+  }
+  return true;
+}
+
 const calculateDepo = () => {
   let principal = amountInput.value;
   let rate = rateInput.value / 100;
@@ -63,6 +71,17 @@ const clearError = () => {
   errorText.textContent = "";
 };
 
-btnDeposit.addEventListener("click", calculateDepo);
-btnInvestment.addEventListener("click", calcuateInvest);
+btnDeposit.addEventListener("click", () => {
+  if (checkInputValues()) {
+    calculateDepo();
+  }
+});
+btnInvestment.addEventListener("click", () => {
+  if (checkInputValues()) {
+    calcuateInvest();
+  }
+});
+
+// btnDeposit.addEventListener("click", calculateDepo);
+// btnInvestment.addEventListener("click", calcuateInvest);
 
