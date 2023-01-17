@@ -54,7 +54,7 @@ body {
   -moz-appearance: textfield;
 }
 
-.error-text {
+.error-text, .error-text-amount {
   display: block;
   margin-top: 10px;
   margin-bottom: 20px;
