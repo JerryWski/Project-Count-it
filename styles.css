@@ -33,7 +33,6 @@ body {
 .header-container {
   font-size: 1rem;
   border-radius: 7px;
-  padding: 12px;
   color: #45f3ff;
 }
 
@@ -175,4 +174,41 @@ body {
   color: #03e9f4;;
   font-weight: 300;
   font-size: 1.1rem;
+}
+
+@media (min-width: 890px) {
+  .container {
+    /* position: absolute;
+    top: 50%;
+    left: 50%; */
+    /* transform: translate(-50%,-50%); */
+    max-width: 1100px;
+    flex:auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .footer-info {
+    font-size: .6rem;
+  }
+  .deposit-amount, .investment-amount {
+    width: 350px;
+  }
+
+  .section-one {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header-container h1 {
+    font-size: 3rem;
+    margin-top: 0;
+    
+  }
+  .inputs-wrapper {
+    margin-top: 10px;
+    width: 300px;
+  }
 }
