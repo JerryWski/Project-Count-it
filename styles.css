@@ -31,7 +31,7 @@ body {
 }
 
 .header-container {
-  font-size: 1rem;
+  font-size: 1.1rem;
   border-radius: 7px;
   color: #45f3ff;
 }
@@ -175,6 +175,24 @@ body {
   font-weight: 300;
   font-size: 1.1rem;
 }
+.intro-header {
+  margin-top: 50px;
+  padding: 5px 15px;
+  margin: 0 auto;
+  width: 100%;
+  text-align: left;
+  font-size: .8rem;
+  color: #03e9f4;
+}
+.intro-text {
+  margin: 0 auto;
+  padding: 15px;
+  color: #8f8f8f;
+  width: 100%;
+  font-size: .7rem;
+  letter-spacing: 1px;
+  text-align: left;
+}
 
 @media (min-width: 890px) {
   .container {
@@ -197,8 +215,10 @@ body {
     margin: 0 auto;
     color: #8f8f8f;
     width: 50%;
+    padding-top: 0;
     letter-spacing: 2px;
     text-align: center;
+    font-size: 1rem;
   }
   .footer-info {
     font-size: .6rem;
@@ -213,7 +233,7 @@ body {
     justify-content: space-between;
     align-items: center;
   }
-  .header-container h1 {
+  .header-container h2 {
     font-size: 3rem;
     margin-top: 0;
     
