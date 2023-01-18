@@ -190,11 +190,17 @@ body {
 .intro-text {
   margin: 0 auto;
   padding: 15px;
-  color: #8f8f8f;
+  color: #ddd4d4;
   width: 100%;
   font-size: 0.7rem;
   letter-spacing: 1px;
+  line-height: 25px;
   text-align: left;
+}
+.duration-explain {
+  text-align: left;
+  color: #fff;
+  font-size: 0.6rem;
 }
 
 @media (min-width: 890px) {
@@ -226,6 +232,10 @@ body {
     letter-spacing: 2px;
     text-align: center;
     font-size: 1rem;
+  }
+  .duration-explain {
+    
+    font-size: 0.7rem;
   }
   .footer-info {
     font-size: 0.6rem;
