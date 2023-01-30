@@ -16,54 +16,112 @@ const errorTextAmount = document.querySelector(".error-text-amount");
 const amountTextDepo = document.querySelectorAll(".amount-text-depo");
 const amountTextInvest = document.querySelectorAll(".amount-text-invest");
 
+// let interest;
+// let interestTwo;
 
-let interest;
-let interestTwo;
+// const checkInputValues = () => {
+//   if (amountInput.value <= 0 || rateInput.value <= 0) {
+//     errorTextAmount.textContent = "Please enter a number greater than 0";
+//     return false;
+//   }
+//   errorTextAmount.textContent= '';
+//   return true;
+// };
 
-const checkInputValues = () => {
-  if (amountInput.value <= 0 || rateInput.value <= 0) {
+// const calculateDepo = () => {
+//   let principal = amountInput.value;
+//   let rate = rateInput.value / 100;
+//   let month = monthInput.value;
+
+//   if (month >= 1 && month <= 12) {
+//     interest = principal * rate * 0.81 * (month / 12);
+//     amountTextDepo.forEach((text) => {
+//       text.classList.add("active");
+//     });
+//     interestAmountDepo.textContent = interest.toFixed(2);
+//     totalAmountDepo.textContent =
+//       parseFloat(principal) + parseFloat(interest.toFixed(2));
+//     clearError();
+//   } else {
+//     errorTextDuration.textContent = " Please enter a numbers from 1 to 12";
+//   }
+// };
+
+// const calcuateInvest = () => {
+//   let principal = amountInput.value;
+//   let rate = rateInput.value / 100;
+//   let month = monthInput.value;
+
+//   if (month >= 1 && month <= 12) {
+//     interestTwo = principal * rate * 0.81;
+//     amountTextInvest.forEach((text) => {
+//       text.classList.add("active");
+//     });
+//     interestAmountInvest.textContent = interestTwo.toFixed(2);
+//     totalAmountInvest.textContent =
+//       parseFloat(principal) + parseFloat(interestTwo.toFixed(2));
+//     clearError();
+//   } else {
+//     errorTextDuration.textContent = " Please enter a numbers from 1 to 12";
+//   }
+// };
+
+// const clearError = () => {
+//   errorTextDuration.textContent = "";
+// };
+
+// btnDeposit.addEventListener("click", () => {
+//   if (checkInputValues()) {
+//     calculateDepo();
+//   }
+// });
+// btnInvestment.addEventListener("click", () => {
+//   if (checkInputValues()) {
+//     calcuateInvest();
+//   }
+// });
+
+const calculate = (e) => {
+  let principal = amountInput.value;
+  let rate = rateInput.value / 100;
+  let month = monthInput.value;
+  let targetClass = e.target.classList[0];
+
+  if (principal <= 0 || rate <= 0) {
     errorTextAmount.textContent = "Please enter a number greater than 0";
-    return false;
+    return;
+  }else {
+    errorTextAmount.textContent= '';
   }
-  errorTextAmount.textContent= '';
-  return true;
-};
-
-const calculateDepo = () => {
-  let principal = amountInput.value;
-  let rate = rateInput.value / 100;
-  let month = monthInput.value;
 
   if (month >= 1 && month <= 12) {
-    interest = principal * rate * 0.81 * (month / 12);
-    amountTextDepo.forEach((text) => {
+    let interest =
+      targetClass === "calcuate-btn-depo"
+        ? principal * rate * 0.81 * (month / 12)
+        : principal * rate * 0.81;
+
+    let amountText =
+      targetClass === "calcuate-btn-depo" ? amountTextDepo : amountTextInvest;
+
+    let interestAmount =
+      targetClass === "calcuate-btn-depo"
+        ? interestAmountDepo
+        : interestAmountInvest;
+
+    let totalAmount =
+      targetClass === "calcuate-btn-depo" ? totalAmountDepo : totalAmountInvest;
+
+    amountText.forEach((text) => {
       text.classList.add("active");
     });
-    interestAmountDepo.textContent = interest.toFixed(2);
-    totalAmountDepo.textContent =
+
+    interestAmount.textContent = interest.toFixed(2);
+    totalAmount.textContent =
       parseFloat(principal) + parseFloat(interest.toFixed(2));
+
     clearError();
   } else {
-    errorTextDuration.textContent = " Please enter a numbers from 1 to 12";
-  }
-};
-
-const calcuateInvest = () => {
-  let principal = amountInput.value;
-  let rate = rateInput.value / 100;
-  let month = monthInput.value;
-
-  if (month >= 1 && month <= 12) {
-    interestTwo = principal * rate * 0.81;
-    amountTextInvest.forEach((text) => {
-      text.classList.add("active");
-    });
-    interestAmountInvest.textContent = interestTwo.toFixed(2);
-    totalAmountInvest.textContent =
-      parseFloat(principal) + parseFloat(interestTwo.toFixed(2));
-    clearError();
-  } else {
-    errorTextDuration.textContent = " Please enter a numbers from 1 to 12";
+    errorTextDuration.textContent = " Please enter a number from 1 to 12";
   }
 };
 
@@ -71,16 +129,5 @@ const clearError = () => {
   errorTextDuration.textContent = "";
 };
 
-btnDeposit.addEventListener("click", () => {
-  if (checkInputValues()) {
-    calculateDepo();
-  }
-});
-btnInvestment.addEventListener("click", () => {
-  if (checkInputValues()) {
-    calcuateInvest();
-  }
-});
-
-// btnDeposit.addEventListener("click", calculateDepo);
-// btnInvestment.addEventListener("click", calcuateInvest);
+btnDeposit.addEventListener("click", calculate);
+btnInvestment.addEventListener("click", calculate);
